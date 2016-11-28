@@ -1,0 +1,50 @@
+entity Customer{
+	name String required,
+    phoneNumber String required,
+    email String required,
+    address String
+}
+
+
+entity Orders{
+	products String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Cart {
+	products String
+}
+
+entity Employee {
+	name String required,
+    phoneNumber String required,
+    email String required
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Product {
+	name String,
+	notes String,
+    price Double,
+    stock Integer,
+}
+
+relationship OneToOne {
+	Customer{has} to Cart
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Cart{has} to Product,
+    Customer{} to Orders,
+    Orders{} to Product,
+    Employee{checks} to Orders
+}
+
+dto * with mapstruct
+
