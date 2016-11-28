@@ -30,20 +30,20 @@ entity Product {
 	name String,
 	notes String,
     price Double,
-    stock Integer,
+    stock Integer
 }
 
 relationship OneToOne {
-	Customer{has} to Cart
+	Customer{cart} to Cart
 }
 
 
 // defining multiple OneToMany relationships with comments
 relationship OneToMany {
-	Cart{has} to Product,
-    Customer{} to Orders,
-    Orders{} to Product,
-    Employee{checks} to Orders
+	Cart{product} to Product,
+    Customer{orders} to Orders,
+    Orders{product} to Product,
+    Employee{orders} to Orders
 }
 
 dto * with mapstruct
