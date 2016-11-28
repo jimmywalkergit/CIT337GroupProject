@@ -73,5 +73,9 @@
         timeToLiveSeconds="3600">
     </cache>
 
+    <cache name="com.mycompany.myapp.domain.Store"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>
