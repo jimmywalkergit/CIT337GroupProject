@@ -9,7 +9,7 @@
 
     function MyProductController ($scope, $state, MyProduct) {
         var vm = this;
-        
+
         vm.myProducts = [];
 
         loadAll();
@@ -19,5 +19,7 @@
                 vm.myProducts = result;
             });
         }
+
+
     }
 })();

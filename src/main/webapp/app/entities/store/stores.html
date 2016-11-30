@@ -254,7 +254,15 @@ p.copyright {
 
                 <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
                 <div class="row">
-                    <p>Price: {{}}</p>
+
+
+
+
+                    <select class="form-control" id="field_myCart" name="myCart" ng-model="vm.myProduct.myCartId" ng-options="myCart.id as myCart.id for myCart in vm.mycarts">
+                        <option value=""></option>
+                    </select>
+
+                    <p>Price:</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
