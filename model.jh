@@ -1,0 +1,52 @@
+entity Customer {
+    name String required,
+    phone String required,
+    email String,
+    address String
+}
+
+entity Cart {
+    
+}
+
+entity Product {
+    name String,
+    description String,
+    image String
+}
+
+entity Orders {
+
+}
+
+entity Employee {
+    /**
+    * The firstname attribute.
+    */
+    firstName String,
+    lastName String,
+    email String,
+    phoneNumber String
+}
+
+relationship OneToOne {
+    Customer{has} to Cart
+}
+
+relationship OneToMany {
+    Customer{has} to Orders
+}
+
+relationship OneToMany{
+    Cart{has} to Product
+}
+
+relationship OneToMany{
+    Orders{has} to Product
+}
+
+relationship OneToMany{
+    Employee{has} to Orders
+}
+
+dto * with mapstruct

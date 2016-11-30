@@ -1,0 +1,17 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "has",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "cart"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20161128210648",
+    "entityTableName": "cart",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

@@ -37,5 +37,45 @@
            timeToLiveSeconds="3600">
     </cache>
     
+    <cache name="com.mycompany.myapp.domain.Customer"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Customer.have"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Cart"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Cart.have"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Product"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Orders"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Orders.have"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Employee"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Employee.have"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Store"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>
