@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "ownscart",
+            "otherEntityName": "myCart",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "myCustomer"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ownsorder",
+            "otherEntityName": "myOrders",
+            "otherEntityRelationshipName": "myCustomer"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161130222838",
+    "entityTableName": "my_customer",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

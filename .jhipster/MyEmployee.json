@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161130222842",
+    "entityTableName": "my_employee",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

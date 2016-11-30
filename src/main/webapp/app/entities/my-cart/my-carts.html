@@ -1,13 +1,13 @@
 <div>
-    <h2>Stores</h2>
+    <h2>My Carts</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="store.new" >
+                <button class="btn btn-primary" ui-sref="my-cart.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span >
-                        Create new Store
+                        Create new My Cart
                     </span>
                 </button>
             </div>
@@ -23,24 +23,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="store in vm.stores track by store.id">
-                    <td><a ui-sref="store-detail({id:store.id})">{{store.id}}</a></td>
+                <tr ng-repeat="myCart in vm.myCarts track by myCart.id">
+                    <td><a ui-sref="my-cart-detail({id:myCart.id})">{{myCart.id}}</a></td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
-                                    ui-sref="store-detail({id:store.id})"
+                                    ui-sref="my-cart-detail({id:myCart.id})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="store.edit({id:store.id})"
+                                    ui-sref="my-cart.edit({id:myCart.id})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-xs hidden-sm"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="store.delete({id:store.id})"
+                                    ui-sref="my-cart.delete({id:myCart.id})"
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm"></span>

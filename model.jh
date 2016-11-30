@@ -1,26 +1,25 @@
-entity Customer {
+entity MyCustomer {
     name String required,
     phone String required,
     email String,
     address String
 }
 
-entity Cart {
+entity MyCart {
     
 }
 
-entity Product {
+entity MyProduct {
     name String,
-    description String,
-    image String,
-    price String
+    price Double,
+    description String
 }
 
-entity Orders {
+entity MyOrders {
 
 }
 
-entity Employee {
+entity MyEmployee {
     /**
     * The firstname attribute.
     */
@@ -31,23 +30,20 @@ entity Employee {
 }
 
 relationship OneToOne {
-    Customer{has} to Cart
+    MyCustomer{ownscart} to MyCart
 }
 
 relationship OneToMany {
-    Customer{has} to Orders
+    MyCustomer{ownsorder} to MyOrders
 }
 
 relationship OneToMany{
-    Cart{has} to Product
+    MyCart{containsprod} to MyProduct
 }
 
 relationship OneToMany{
-    Orders{has} to Product
+    MyOrders{containsorderprod} to MyProduct
 }
 
-relationship OneToMany{
-    
-}
 
 dto * with mapstruct
