@@ -12,7 +12,8 @@ entity Cart {
 entity Product {
     name String,
     description String,
-    image String
+    image String,
+    price String
 }
 
 entity Orders {
@@ -46,7 +47,7 @@ relationship OneToMany{
 }
 
 relationship OneToMany{
-    Employee{has} to Orders
+    
 }
 
 dto * with mapstruct
