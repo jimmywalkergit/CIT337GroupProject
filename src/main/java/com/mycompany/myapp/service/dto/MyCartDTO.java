@@ -13,6 +13,15 @@ public class MyCartDTO implements Serializable {
 
     private Long id;
 
+    private String myProductId;
+
+    public String getMyProductId() {
+        return myProductId;
+    }
+
+    public void setMyProductId(String myProductId) {
+        this.myProductId = myProductId;
+    }
 
     public Long getId() {
         return id;

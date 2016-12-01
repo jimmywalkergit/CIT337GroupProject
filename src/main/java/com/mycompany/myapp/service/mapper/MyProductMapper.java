@@ -14,6 +14,7 @@ public interface MyProductMapper {
 
     @Mapping(source = "myCart.id", target = "myCartId")
     @Mapping(source = "myOrders.id", target = "myOrdersId")
+
     MyProductDTO myProductToMyProductDTO(MyProduct myProduct);
 
     List<MyProductDTO> myProductsToMyProductDTOs(List<MyProduct> myProducts);

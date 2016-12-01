@@ -323,7 +323,7 @@ p.copyright {
 
         <div class="row">
             <div class="col-sm-4">
-
+                <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'milk'}">Cart: {{myCartId}}</p>
                 <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
                 <div class="row">
                     <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'milk'}">Price: {{myProduct.price}}</p>
