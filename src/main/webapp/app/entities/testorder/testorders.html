@@ -2,6 +2,24 @@
     <h2>Testorders</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
+
+
+
+
+        <div ng-repeat="testorder in vm.testorders track by testorder.id">
+
+            Cart: {{testorder.id}}
+            <div ng-repeat="testproduct in vm.testproducts track by testproduct.id">
+
+                {{testproduct.name}}
+            </div>
+
+
+
+
+
+        </div>
+
         <div class="row">
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="testorder.new" >
@@ -58,3 +76,5 @@
         </table>
     </div>
 </div>
+
+
