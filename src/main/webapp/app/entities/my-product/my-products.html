@@ -326,7 +326,7 @@ p.copyright {
 
                 <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
                 <div class="row">
-                    <p>Price:</p>
+                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'milk'}">Price: {{myProduct.price}}</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
@@ -348,7 +348,7 @@ p.copyright {
 
                 <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
                 <div class="row">
-                    <p>Price: {{}}</p>
+                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'steak'}">Price: {{myProduct.price}}</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
