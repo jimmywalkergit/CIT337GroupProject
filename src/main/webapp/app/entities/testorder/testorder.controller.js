@@ -14,6 +14,8 @@
         vm.testorders = [];
         vm.testproducts = Testproduct.query();
 
+
+
         loadAll();
 
         function loadAll() {

@@ -6,13 +6,30 @@
 
 
 
-        <div ng-repeat="testorder in vm.testorders track by testorder.id">
+
+        <div ng-repeat="testorder in vm.testorders track by testorder.id ">
+            Other: {{testorder.ownsorders}}
+
+
+            <div ng-repeat="ownsorder in testorder.ownsorders">
+
+                Filtered: {{ownsorder.price}}
+            </div>
+
+
+        </div>
+
+        <div ng-repeat="testorder in vm.testorders track by testorder.id ">
 
             Cart: {{testorder.id}}
+</div>
+
             <div ng-repeat="testproduct in vm.testproducts track by testproduct.id">
 
                 {{testproduct.name}}
             </div>
+
+
 
 
 
@@ -75,6 +92,19 @@
             </tbody>
         </table>
     </div>
+
+
+
+
+<label>Search: <input ng-model="searchText"></label>
+<table id="searchTextResults">
+    <tr><th>Orders Containing: {{searchText}}</th></tr>
+    <tr ng-repeat="testorder in vm.testorders | filter:searchText">
+        <td>Order:  {{testorder}}</td>
+
+    </tr>
+</table>
+
 </div>
 
 
