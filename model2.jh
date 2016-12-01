@@ -1,0 +1,21 @@
+entity Testproduct {
+    name String,
+    price String,
+    description String,
+    image String
+}
+
+entity Testorder {
+
+}
+
+
+
+relationship ManyToMany {
+    Testorder{ownsorder} to Testproduct
+}
+
+
+
+
+dto * with mapstruct

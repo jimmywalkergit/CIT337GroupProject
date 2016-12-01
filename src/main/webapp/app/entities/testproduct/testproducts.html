@@ -1,13 +1,13 @@
 <div>
-    <h2>My Products</h2>
+    <h2>Testproducts</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="my-product.new" >
+                <button class="btn btn-primary" ui-sref="testproduct.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span >
-                        Create new My Product
+                        Create new Testproduct
                     </span>
                 </button>
             </div>
@@ -22,39 +22,33 @@
                     <th><span>Name</span></th>
                     <th><span>Price</span></th>
                     <th><span>Description</span></th>
-                    <th><span>My Cart</span></th>
-                    <th><span>My Orders</span></th>
+                    <th><span>Image</span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="myProduct in vm.myProducts track by myProduct.id">
-                    <td><a ui-sref="my-product-detail({id:myProduct.id})">{{myProduct.id}}</a></td>
-                    <td>{{myProduct.name}}</td>
-                    <td>{{myProduct.price}}</td>
-                    <td>{{myProduct.description}}</td>
-                    <td>
-                        <a ui-sref="my-cart-detail({id:myProduct.myCartId})">{{myProduct.myCartId}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="my-orders-detail({id:myProduct.myOrdersId})">{{myProduct.myOrdersId}}</a>
-                    </td>
+                <tr ng-repeat="testproduct in vm.testproducts track by testproduct.id">
+                    <td><a ui-sref="testproduct-detail({id:testproduct.id})">{{testproduct.id}}</a></td>
+                    <td>{{testproduct.name}}</td>
+                    <td>{{testproduct.price}}</td>
+                    <td>{{testproduct.description}}</td>
+                    <td>{{testproduct.image}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
-                                    ui-sref="my-product-detail({id:myProduct.id})"
+                                    ui-sref="testproduct-detail({id:testproduct.id})"
                                     class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-xs hidden-sm"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="my-product.edit({id:myProduct.id})"
+                                    ui-sref="testproduct.edit({id:testproduct.id})"
                                     class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-xs hidden-sm"></span>
                             </button>
                             <button type="submit"
-                                    ui-sref="my-product.delete({id:myProduct.id})"
+                                    ui-sref="testproduct.delete({id:testproduct.id})"
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm"></span>

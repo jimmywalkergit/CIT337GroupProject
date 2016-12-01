@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "ownsorder",
+            "otherEntityName": "testproduct",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20161201033400",
+    "entityTableName": "testorder",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}
