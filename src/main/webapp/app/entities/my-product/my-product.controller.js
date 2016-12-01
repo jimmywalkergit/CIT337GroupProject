@@ -9,15 +9,15 @@
 
     function MyProductController ($scope, $state, MyProduct) {
         var vm = this;
-        
+
         vm.myProducts = [];
 
-        loadAll();
+                 loadAll();
 
-        function loadAll() {
-            MyProduct.query(function(result) {
-                vm.myProducts = result;
-            });
-        }
+                 function loadAll() {
+                     MyProduct.query(function(result) {
+                         vm.myProducts = result;
+                     });
+                 }
     }
 })();

@@ -9,7 +9,8 @@
 
     function StoreController ($scope, $state, Store) {
         var vm = this;
-        
+
+
         vm.stores = [];
 
         loadAll();
@@ -21,3 +22,7 @@
         }
     }
 })();
+
+
+
+

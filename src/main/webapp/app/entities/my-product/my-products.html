@@ -338,7 +338,7 @@ p.copyright {
 
 
                 <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'carrots'}">Price: {{myProduct.price}}</p>
+                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'carrots'}">Price: {{myProduct.price}} Cart: {{myProduct.myCartId}}</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
