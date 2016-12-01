@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <style>
     /*
  * Start Bootstrap - Landing Page (http://startbootstrap.com/)
@@ -254,14 +253,6 @@ p.copyright {
 
                 <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
                 <div class="row">
-
-
-
-
-                    <select class="form-control" id="field_myCart" name="myCart" ng-model="vm.myProduct.myCartId" ng-options="myCart.id as myCart.id for myCart in vm.mycarts">
-                        <option value=""></option>
-                    </select>
-
                     <p>Price:</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
@@ -272,7 +263,22 @@ p.copyright {
 
                 <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200">
                 <div class="row">
-                    <p>Price: {{}}</p>
+
+                    <div ng-repeat="myProduct in vm.myProducts track by myProduct.id">
+                        <td>{{myProduct.name}}</td>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
@@ -384,4 +390,3 @@ p.copyright {
 
 </body>
 
-</html>
