@@ -5,12 +5,13 @@
         .module('cit337ProjectApp')
         .controller('MyCartController', MyCartController);
 
-    MyCartController.$inject = ['$scope', '$state', 'MyCart','Testproduct'];
+    MyCartController.$inject = ['$scope', '$state', 'MyCart','Testproduct','MyProduct'];
 
-    function MyCartController ($scope, $state, MyCart) {
+    function MyCartController ($scope, $state, MyCart, Testproduct, MyProduct) {
         var vm = this;
         vm.myCarts = [];
         vm.testproducts = Testproduct.query();
+        vm.myproducts = MyProduct.query();
 
 
         loadAll();
@@ -21,4 +22,10 @@
             });
         }
     }
+    function getTotal(){
+
+
+
+    }
+
 })();

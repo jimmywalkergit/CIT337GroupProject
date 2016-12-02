@@ -307,15 +307,15 @@ p.copyright {
         <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
 <h2>Order Review:</h2>
 
-            <div ng-repeat="testproduct in vm.testproducts track by testproduct.id">
 
-                {{testproduct.name}}
+
+            <div ng-repeat="myproduct in vm.myproducts track by myproduct.id">
+                Name: {{myproduct.name}} Price: {{myproduct.price | currency}}
             </div>
-            <p ng-repeat="myProduct in vm.myProducts track by myProduct.id">Name: {{myProduct.name}} Price: {{myProduct.price}}</p>
 
-            Total:
+
+
         </div>
-    </div>
 
 </div>
 <!-- /.container -->
