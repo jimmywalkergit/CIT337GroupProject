@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     <h2>My Orders</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
@@ -55,7 +55,7 @@
             </tbody>
         </table>
     </div>
-
+-->
 
     <style>
     /*
@@ -250,10 +250,13 @@ p.copyright {
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Cart</span></a>
+                                <a href="/#/my-product" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Products</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Orders</span></a>
+                                <a href="/#/my-cart" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Cart</span></a>
+                            </li>
+                            <li>
+                                <a href="/#/my-orders" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Orders</span></a>
                             </li>
                         </ul>
                     </div>
@@ -274,54 +277,6 @@ p.copyright {
         <div class="container">
 
 
-            <h2>Your Cart:</h2>
-            <div class="col-md-4">
-
-
-
-
-
-                <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200">
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
-                    <button type="button" class="btn btn-danger">Remove From Cart</button>
-                </div>
-
-
-
-                <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
-                    <button type="button" class="btn btn-danger">Remove From Cart</button>
-                </div>
-
-
-
-
-                <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
-                    <button type="button" class="btn btn-danger">Remove From Cart</button>
-                </div>
-
-            </div>
-
-
-
-
-            <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
-                <h2>Review Your Order:</h2>
-                <label>Cart ID: <input placeholder = "Cart ID:" value = "Placeholder" ng-model="searchText"></label>
-                <table id="searchTextResults">
-                    <tr><th>Products in Cart:</th></tr>
-
-                    <tr ng-repeat="testorder in vm.testorders | filter:{id: searchText}">
-                        <td>{{testorder.ownsorders}}</td>
-                    </tr>
-                </table>
-                <button type="button" class="btn btn-default">Submit Order</button>
-
-            </div>
 
         </div>
         <!-- /.container -->
@@ -360,17 +315,6 @@ p.copyright {
     <!-- /.content-section-a -->
 
 
-    <div class="banner">
-
-        <div class="container">
-
-
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
 
     <!-- Footer -->
     <footer>
