@@ -14,18 +14,27 @@
         vm.myproducts = MyProduct.query();
         vm.testorders = Testorder.query();
 
+        vm.msg = "asdasd"
+
+
+
         loadAll();
 
         function loadAll() {
             MyCart.query(function(result) {
                 vm.myCarts = result;
             });
+
+         function go() {
+            this.msg = 'clicked';
+          }
+
+
+
         }
-    }
-    function getTotal(){
+}
 
 
 
-    }
 
 })();
