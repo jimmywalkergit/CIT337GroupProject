@@ -66,10 +66,6 @@
             </tbody>
         </table>
     </div>
-
-
-
-
 </div>
 -->
 
@@ -265,10 +261,13 @@ p.copyright {
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
                         <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Cart</span></a>
+                            <a href="/#/my-product" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Products</span></a>
                         </li>
                         <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Orders</span></a>
+                            <a href="/#/my-cart" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Cart</span></a>
+                        </li>
+                        <li>
+                            <a href="/#/my-orders" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Orders</span></a>
                         </li>
                     </ul>
                 </div>
@@ -286,7 +285,7 @@ p.copyright {
 <a  name="services"></a>
 <div class="content-section-a">
 
-<style>.carousel{
+    <style>.carousel{
         width:autox;
         height:360px;}
 .carousel-inner > .item > img{
@@ -294,21 +293,16 @@ p.copyright {
             width: 40%; /* use this, or not */
         margin: auto;
      }
-
-
      div.carousel slide{
     width: 80%; /* for example */
     margin: auto;
 }
-
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img{
 margin: auto;
 }
-
 .row{
 padding-top:100px;
-
 }
 </style>
 
@@ -355,66 +349,66 @@ padding-top:100px;
             </a>
         </div>
 
-        </div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-
-
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                </div>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200">
-
-
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                </div>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-
-        <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
-
-            <label>Search: <input placeholder = "Enter Your Product Search Here:" value = "" ng-model="searchText"></label>
-            <table id="searchTextResults">
-                <tr><th>Matching Products In Stock:</th></tr>
-                <tr ng-repeat="products in vm.testproducts | filter:searchText">
-                    <td>{{products.name}} </td>
-                    <td>Price: {{products.price | currency}}<td>
-
-                </tr>
-            </table>
-
-
-        </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
+            <div class="row">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
+                <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+
+            <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200">
+
+
+            <div class="row">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
+                <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div class="col-sm-4">
+
+            <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
+            <div class="row">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
+                <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
+
+        <label>Search: <input placeholder = "Enter Your Product Search Here:" value = "" ng-model="searchText"></label>
+        <table id="searchTextResults">
+            <tr><th>Matching Products In Stock:</th></tr>
+            <tr ng-repeat="products in vm.testproducts | filter:searchText">
+                <td>{{products.name}} </td>
+                <td>Price: {{products.price | currency}}<td>
+
+            </tr>
+        </table>
+
+
+    </div>
+</div>
 
 </div>
 <!-- /.container -->
