@@ -121,5 +121,25 @@
         timeToLiveSeconds="3600">
     </cache>
 
+    <cache name="com.mycompany.myapp.domain.Orderproduct"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Orderlog"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Orderlog.hasproducts"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Orderlog.hascustomers"
+        timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Ordercustomer"
+        timeToLiveSeconds="3600">
+    </cache>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </ehcache>

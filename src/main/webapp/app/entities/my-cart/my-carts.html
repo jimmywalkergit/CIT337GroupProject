@@ -287,8 +287,8 @@ p.copyright {
 
             <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200" >
             <div class="row">
-                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
-                <div class = "img">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">{{myProduct.name}}</p>
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>                <div class = "img">
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
                 </div>
             </div>
@@ -297,8 +297,8 @@ p.copyright {
 
             <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200" >
             <div class="row">
-                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
-                <div class = "img">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">{{myProduct.name}}</p>
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>                <div class = "img">
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
                 </div>
             </div>
@@ -308,7 +308,9 @@ p.copyright {
 
             <img src="content/images/steak.jpg" alt="steak" height="200" width="200" >
             <div class="row">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">{{myProduct.name}}</p>
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
+
                 <div class = "img">
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
                 </div>
@@ -333,8 +335,6 @@ p.copyright {
         </div>
 
 
-
-        <button ng-click="vm.go()">Go</button>
 
 
 

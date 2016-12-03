@@ -1,0 +1,30 @@
+entity Orderproduct {
+    name String,
+    price String,
+    description String,
+    image String
+}
+
+entity Orderlog {
+
+}
+
+entity Ordercustomer {
+    name String,
+    address String,
+    phone String,
+    email String
+}
+
+
+
+relationship ManyToMany {
+    Orderlog{hasproducts} to Orderproduct
+}
+
+relationship ManyToMany {
+    Orderlog{hascustomers} to Ordercustomer
+}
+
+
+dto * with mapstruct
