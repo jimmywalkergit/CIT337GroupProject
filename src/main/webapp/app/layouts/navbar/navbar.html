@@ -75,16 +75,27 @@
                             </a>
                         </li>
                         -->
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="my-product" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span >Products Page</span>
+                            </a>
+                        </li>
+
+                        
                         <li ui-sref-active="active">
                             <a ui-sref="my-cart" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                 <span >Cart</span>
                             </a>
                         </li>
+
+
                         <li ui-sref-active="active">
-                            <a ui-sref="my-product" ng-click="vm.collapseNavbar()">
+                            <a ui-sref="my-orders" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                                <span >Products</span>
+                                <span >Orders Page</span>
                             </a>
                         </li>
 
@@ -94,21 +105,15 @@
                                 <span >Customer Entity</span>
                             </a>
                         </li>
-                        <!--
-                        <li ui-sref-active="active">
-                            <a ui-sref="my-orders" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                                <span >My Orders</span>
-                            </a>
-                        </li>
 
-                        <li ui-sref-active="active">
-                            <a ui-sref="my-employee" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                                <span >My Employee</span>
-                            </a>
-                        </li>
-                        -->
+                        <!--
+                                                <li ui-sref-active="active">
+                                                    <a ui-sref="my-employee" ng-click="vm.collapseNavbar()">
+                                                        <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                                        <span >My Employee</span>
+                                                    </a>
+                                                </li>
+                                                -->
                         <li ui-sref-active="active">
                             <a ui-sref="testorder" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
