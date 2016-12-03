@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "hasproducts",
+            "otherEntityName": "orderproduct",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "",
+            "relationshipName": "hascustomers",
+            "otherEntityName": "ordercustomer",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20161203222110",
+    "entityTableName": "orderlog",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no"
+}

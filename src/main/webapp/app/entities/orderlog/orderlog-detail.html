@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Orderlog</span> {{vm.orderlog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Hasproducts</span></dt>
+        <dd>
+            <span ng-repeat="hasproducts in vm.orderlog.hasproducts">
+                <a ui-sref="orderproduct-detail({id: hasproducts.id})">{{hasproducts.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span>Hascustomers</span></dt>
+        <dd>
+            <span ng-repeat="hascustomers in vm.orderlog.hascustomers">
+                <a ui-sref="ordercustomer-detail({id: hascustomers.id})">{{hascustomers.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="orderlog-detail.edit({id:vm.orderlog.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>
