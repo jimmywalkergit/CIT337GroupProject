@@ -308,6 +308,21 @@ p.copyright {
     <div class="container">
 
 
+
+        <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
+            <h2>Review Your Order:</h2>
+            <label>Cart ID: <input placeholder = "Cart ID:" value = "Placeholder" ng-model="searchText"></label>
+            <table id="searchTextResults">
+                <tr><th>Products in Cart:</th></tr>
+
+                <tr ng-repeat="testorder in vm.testorders | filter:{id: searchText}">
+                    <td>{{testorder.ownsorders}}</td>
+                </tr>
+            </table>
+
+        </div>
+
+
     </div>
     <!-- /.container -->
 
