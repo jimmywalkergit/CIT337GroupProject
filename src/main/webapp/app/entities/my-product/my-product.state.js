@@ -26,6 +26,8 @@
             resolve: {
             }
         })
+
+
         .state('my-product-detail', {
             parent: 'entity',
             url: '/my-product/{id}',
