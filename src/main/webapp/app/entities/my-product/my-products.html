@@ -1,3 +1,4 @@
+<!--
 <div>
     <h2>My Products</h2>
     <jhi-alert></jhi-alert>
@@ -70,7 +71,7 @@
 
 
 </div>
-
+-->
 
 <style>
     /*
@@ -267,7 +268,7 @@ p.copyright {
                             <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Cart</span></a>
                         </li>
                         <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Order</span></a>
+                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Orders</span></a>
                         </li>
                     </ul>
                 </div>
@@ -293,7 +294,7 @@ p.copyright {
             <div class="col-sm-4">
                 <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
                 <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'milk'}">Price: {{myProduct.price}}</p>
+                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
@@ -305,7 +306,7 @@ p.copyright {
 
 
                 <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'carrots'}">Price: {{myProduct.price}} Cart: {{myProduct.myCartId}}</p>
+                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
@@ -315,7 +316,7 @@ p.copyright {
 
                 <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
                 <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'steak'}">Price: {{myProduct.price}}</p>
+                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
 
@@ -331,9 +332,10 @@ p.copyright {
 
             <label>Search: <input placeholder = "Enter Your Product Search Here:" value = "" ng-model="searchText"></label>
             <table id="searchTextResults">
-                <tr><th>Matching Products In Stock:{{searchText}}</th></tr>
+                <tr><th>Matching Products In Stock:</th></tr>
                 <tr ng-repeat="products in vm.myProducts | filter:searchText">
-                    <td>{{products.name}} Price: ${{products.price}}</td>
+                    <td>{{products.name}} </td>
+                    <td>Price: {{products.price | currency}}<td>
 
                 </tr>
             </table>
