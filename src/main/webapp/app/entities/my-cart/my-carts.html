@@ -273,20 +273,21 @@ p.copyright {
 <h2>Your Cart:</h2>
         <div class="col-md-4">
 
+
+
+
+
+            <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200">
+            <div class="row">
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
+                <button type="button" class="btn btn-danger">Remove From Cart</button>
+            </div>
+
+
+
                 <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
                 <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'milk'}">Price: {{myProduct.price}}</p>
-                    <button type="button" class="btn btn-danger">Remove From Cart</button>
-                </div>
-
-
-
-
-                <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200">
-
-
-                <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'carrots'}">Price: {{myProduct.price}} Cart: {{myProduct.myCartId}}</p>
+                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
                 </div>
 
@@ -295,7 +296,7 @@ p.copyright {
 
                 <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
                 <div class="row">
-                    <p ng-repeat="myProduct in vm.myProducts | filter: {name: 'steak'}">Price: {{myProduct.price}}</p>
+                    <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
                 </div>
 
@@ -306,14 +307,15 @@ p.copyright {
 
         <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
 <h2>Order Review:</h2>
+            <label>Cart ID: <input defaultValue = "Placeholder" placeholder = "Cart ID:" value = "Placeholder" ng-model="searchText"></label>
+            <table id="searchTextResults">
+                <tr><th>Products in Cart:{{searchText}}</th></tr>
+                <tr ng-repeat="testorder in vm.testorders | filter:searchText">
+                    <td>{{testorder.ownsorders}}</td>
 
-
-
-            <div ng-repeat="myproduct in vm.myproducts track by myproduct.id">
-                Name: {{myproduct.name}} Price: {{myproduct.price | currency}}
-            </div>
-
-
+                </tr>
+            </table>
+            <button type="button" class="btn btn-default">Submit Order</button>
 
         </div>
 
