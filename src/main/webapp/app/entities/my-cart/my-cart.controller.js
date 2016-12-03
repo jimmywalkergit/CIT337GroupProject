@@ -5,14 +5,14 @@
         .module('cit337ProjectApp')
         .controller('MyCartController', MyCartController);
 
-    MyCartController.$inject = ['$scope', '$state', 'MyCart','Testproduct','MyProduct'];
+    MyCartController.$inject = ['$scope', '$state', 'MyCart','Testproduct','MyProduct', 'Testorder'];
 
-    function MyCartController ($scope, $state, MyCart, Testproduct, MyProduct) {
+    function MyCartController ($scope, $state, MyCart, Testproduct, MyProduct, Testorder) {
         var vm = this;
         vm.myCarts = [];
         vm.testproducts = Testproduct.query();
         vm.myproducts = MyProduct.query();
-
+        vm.testorders = Testorder.query();
 
         loadAll();
 
