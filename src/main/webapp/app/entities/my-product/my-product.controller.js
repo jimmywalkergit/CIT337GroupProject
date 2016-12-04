@@ -5,11 +5,11 @@
         .module('cit337ProjectApp')
         .controller('MyProductController', MyProductController);
 
-    MyProductController.$inject = ['$scope', '$state', 'MyProduct','Testproduct'];
+    MyProductController.$inject = ['$scope', '$state', 'MyProduct','Testproduct','Orderproduct'];
 
-    function MyProductController ($scope, $state, MyProduct, Testproduct) {
+    function MyProductController ($scope, $state, MyProduct, Testproduct, Orderproduct) {
         var vm = this;
-                vm.testproducts = Testproduct.query();
+                vm.testproducts = Orderproduct.query();
 
                 vm.myProducts = [];
 

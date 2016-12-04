@@ -7,7 +7,7 @@
         <dt><span>Ownsorder</span></dt>
         <dd>
             <span ng-repeat="ownsorder in vm.testorder.ownsorders">
-                <a ui-sref="testproduct-detail({id: ownsorder.id})">{{ownsorder.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="testproduct-detail({id: ownsorder.id})">{{ownsorder.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>

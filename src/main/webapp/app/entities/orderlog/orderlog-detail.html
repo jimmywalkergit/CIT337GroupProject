@@ -7,13 +7,13 @@
         <dt><span>Hasproducts</span></dt>
         <dd>
             <span ng-repeat="hasproducts in vm.orderlog.hasproducts">
-                <a ui-sref="orderproduct-detail({id: hasproducts.id})">{{hasproducts.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="orderproduct-detail({id: hasproducts.id})">{{hasproducts.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
         <dt><span>Hascustomers</span></dt>
         <dd>
             <span ng-repeat="hascustomers in vm.orderlog.hascustomers">
-                <a ui-sref="ordercustomer-detail({id: hascustomers.id})">{{hascustomers.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="ordercustomer-detail({id: hascustomers.id})">{{hascustomers.name}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>

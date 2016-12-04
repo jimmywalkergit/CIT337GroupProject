@@ -16,11 +16,11 @@
 
         <div class="form-group">
             <label for="field_hasproducts">Hasproducts</label>
-            <select class="form-control" id="field_hasproducts" multiple name="hasproducts" ng-model="vm.orderlog.hasproducts" ng-options="orderproduct as orderproduct.id for orderproduct in vm.orderproducts track by orderproduct.id"></select>
+            <select class="form-control" id="field_hasproducts" multiple name="hasproducts" ng-model="vm.orderlog.hasproducts" ng-options="orderproduct as orderproduct.name for orderproduct in vm.orderproducts track by orderproduct.id"></select>
         </div>
         <div class="form-group">
             <label for="field_hascustomers">Hascustomers</label>
-            <select class="form-control" id="field_hascustomers" multiple name="hascustomers" ng-model="vm.orderlog.hascustomers" ng-options="ordercustomer as ordercustomer.id for ordercustomer in vm.ordercustomers track by ordercustomer.id"></select>
+            <select class="form-control" id="field_hascustomers" multiple name="hascustomers" ng-model="vm.orderlog.hascustomers" ng-options="ordercustomer as ordercustomer.name for ordercustomer in vm.ordercustomers track by ordercustomer.id"></select>
         </div>
     </div>
     <div class="modal-footer">

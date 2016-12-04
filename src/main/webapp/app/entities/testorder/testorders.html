@@ -1,38 +1,7 @@
 <div>
-    <h2>Testorders</h2>
+    <h2>Carts</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
-
-
-
-
-
-        <div ng-repeat="testorder in vm.testorders track by testorder.id ">
-            Other: {{testorder.ownsorders}}
-
-
-            <div ng-repeat="ownsorder in testorder.ownsorders">
-
-                Filtered: {{ownsorder.price}}
-            </div>
-
-
-        </div>
-
-        <div ng-repeat="testorder in vm.testorders track by testorder.id ">
-
-            Cart: {{testorder.id}}
-</div>
-
-            <div ng-repeat="testproduct in vm.testproducts track by testproduct.id">
-
-                {{testproduct.name}}
-            </div>
-
-
-
-
-
 
 
         </div>
@@ -42,7 +11,7 @@
                 <button class="btn btn-primary" ui-sref="testorder.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span >
-                        Create new Testorder
+                        Create new Cart
                     </span>
                 </button>
             </div>
@@ -54,7 +23,7 @@
             <thead>
                 <tr>
                     <th><span>ID</span></th>
-                    <th><span>Ownsorder</span></th>
+                    <th><span>HasProducts</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -63,7 +32,7 @@
                     <td><a ui-sref="testorder-detail({id:testorder.id})">{{testorder.id}}</a></td>
                     <td>
                         <span ng-repeat="ownsorder in testorder.ownsorders">
-                            <a class="form-control-static" ui-sref="testproduct-detail({id: ownsorder.id})">{{ownsorder.id}}</a>{{$last ? '' : ', '}}
+                            <a class="form-control-static" ui-sref="testproduct-detail({id: ownsorder.id})">{{ownsorder.name}}</a>{{$last ? '' : ', '}}
                         </span>
                     </td>
                     <td class="text-right">
@@ -94,16 +63,6 @@
     </div>
 
 
-
-
-<label>Search: <input ng-model="searchText"></label>
-<table id="searchTextResults">
-    <tr><th>Orders Containing: {{searchText}}</th></tr>
-    <tr ng-repeat="testorder in vm.testorders | filter:searchText">
-        <td>Order:  {{testorder}}</td>
-
-    </tr>
-</table>
 
 </div>
 

@@ -289,8 +289,25 @@ p.copyright {
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+            <div class="col-lg-5 col-lg-offset-1  col-sm-6">
 
+                <h2>View Your Order:</h2>
+
+
+
+
+
+
+                <label>Enter Your Order ID Here: <input placeholder = "Order ID" value = "" ng-model="searchText2"></label>
+                <table id="ordersearchTextResults">
+                    <tr><th>Viewing Order #{{searchText2}}:</th></tr>
+                    <tr ng-repeat="orders in vm.orderlogs | filter:{id: searchText2}">
+                        <td style="padding-right:20px;">{{orders.hascustomers}} </td>
+                        <td style="padding-bottom:30px;">Products: {{orders.hasproducts}}<td>
+
+
+                    </tr>
+                </table>
             </div>
             <div class="col-lg-5 col-sm-pull-6  col-sm-6">
 
@@ -307,20 +324,6 @@ p.copyright {
 
     <div class="container">
 
-
-
-        <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
-            <h2>Review Your Order:</h2>
-            <label>Cart ID: <input placeholder = "Cart ID:" value = "Placeholder" ng-model="searchText"></label>
-            <table id="searchTextResults">
-                <tr><th>Products in Cart:</th></tr>
-
-                <tr ng-repeat="testorder in vm.testorders | filter:{id: searchText}">
-                    <td>{{testorder.ownsorders}}</td>
-                </tr>
-            </table>
-
-        </div>
 
 
     </div>

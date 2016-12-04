@@ -16,7 +16,7 @@
 
         <div class="form-group">
             <label for="field_ownsorder">Ownsorder</label>
-            <select class="form-control" id="field_ownsorder" multiple name="ownsorder" ng-model="vm.testorder.ownsorders" ng-options="testproduct as testproduct.id for testproduct in vm.testproducts track by testproduct.id"></select>
+            <select class="form-control" id="field_ownsorder" multiple name="ownsorder" ng-model="vm.testorder.ownsorders" ng-options="testproduct as testproduct.name for testproduct in vm.testproducts track by testproduct.id"></select>
         </div>
     </div>
 
