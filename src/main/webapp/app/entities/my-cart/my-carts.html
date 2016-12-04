@@ -330,7 +330,9 @@ p.copyright {
                 <tr ng-repeat="testorder in vm.testorders | filter:{id: searchText}">
                     <td>{{testorder.ownsorders}}</td>
                 </tr>
+                <button onclick="window.location.href='/#/my-orders'">Submit Order</button>
             </table>
+
 
         </div>
 

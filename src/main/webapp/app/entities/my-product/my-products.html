@@ -312,6 +312,7 @@ padding-top:100px;
 });
     </script>
     <div class="container">
+        <h1 style="text-align:center;">Sales:</h1>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -324,16 +325,16 @@ padding-top:100px;
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <img src="content/images/steak.jpg" alt="..." height="400" width="400">
-                    <h2 class="carouseltext" ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">{{myProduct.name}}  {{myProduct.price | currency}}</h2>
+                    <h2 class="carouseltext" ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">{{myProduct.name}}: {{myProduct.price | currency}}  <strike style="color:red">$75.00</strike> </h2>
                     <button type="button" class="btn btn-primary">Add to Cart</button></div>
                 <div class="item">
                     <img src="content/images/milk.jpeg" alt="..." height="400" width="400">
-                    <h2 class="carouseltext" ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">{{myProduct.name}}  {{myProduct.price | currency}}</h2>
+                    <h2 class="carouseltext" ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">{{myProduct.name}}:    {{myProduct.price | currency}} <strike style="color:red">$20.00</strike></h2>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
                 <div class="item">
                     <img src="content/images/carrots.jpg" alt="..."height="400" width="400">
-                    <h2 class="carouseltext" ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">{{myProduct.name}}  {{myProduct.price | currency}}</h2>
+                    <h2 class="carouseltext" ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">{{myProduct.name}}:    </a> {{myProduct.price | currency}} <strike style="color:red">$30.00</strike></h2>
                     <button type="button" class="btn btn-primary">Add to Cart</button>
                 </div>
             </div>
@@ -355,12 +356,13 @@ padding-top:100px;
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 
-
     <div class="row">
+        <h2>Products:</h2>
+
         <div class="col-sm-4">
             <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200">
             <div class="row">
-                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}} <strike style="color:red">$10.00</strike></p>
                 <button type="button" class="btn btn-primary">Add to Cart</button>
             </div>
 
@@ -372,7 +374,7 @@ padding-top:100px;
 
 
             <div class="row">
-                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}  <strike style="color:red">$30.00</strike>  </p>
                 <button type="button" class="btn btn-primary">Add to Cart</button>
             </div>
 
@@ -382,7 +384,7 @@ padding-top:100px;
 
             <img src="content/images/steak.jpg" alt="steak" height="200" width="200">
             <div class="row">
-                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
+                <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}  <strike style="color:red">$75.00</strike> </p>
                 <button type="button" class="btn btn-primary">Add to Cart</button>
             </div>
 

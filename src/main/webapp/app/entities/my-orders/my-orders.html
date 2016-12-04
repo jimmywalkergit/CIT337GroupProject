@@ -300,10 +300,10 @@ p.copyright {
 
                 <label>Enter Your Order ID Here: <input placeholder = "Order ID" value = "" ng-model="searchText2"></label>
                 <table id="ordersearchTextResults">
-                    <tr><th>Matching Orders:</th></tr>
-                    <tr ng-repeat="orders in vm.orderlogs | filter:{id: searchText2}">
+                    <tr><th>Viewing Order #{{searchText2}}:</th></tr>
+                    <tr  style="padding-top:50px;" ng-repeat="orders in vm.orderlogs | filter:{id: searchText2}">
                         <td>{{orders.hascustomers}} </td>
-                        <td style="padding-top:20px;">Products: {{orders.hasproducts}}<td>
+                        <td>Products: {{orders.hasproducts}}<td>
 
 
                     </tr>
