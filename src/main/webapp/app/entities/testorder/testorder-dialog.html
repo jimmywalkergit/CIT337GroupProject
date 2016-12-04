@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myTestorderLabel">Create or edit a Testorder</h4>
+        <h4 class="modal-title" id="myTestorderLabel">Create or edit a Cart</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-group">
-            <label for="field_ownsorder">Ownsorder</label>
+            <label for="field_ownsorder">HasProducts</label>
             <select class="form-control" id="field_ownsorder" multiple name="ownsorder" ng-model="vm.testorder.ownsorders" ng-options="testproduct as testproduct.name for testproduct in vm.testproducts track by testproduct.id"></select>
         </div>
     </div>
