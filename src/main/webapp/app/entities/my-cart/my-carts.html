@@ -276,43 +276,42 @@ p.copyright {
 
         <h2>Your Cart:</h2>
         <div class="col-md-4">
-
-
-
             <style>
         .img{
-        padding-bottom:50px;
+        padding-bottom:10px;
         }
 </style>
-
-            <img src="content/images/carrots.jpg" alt="carrots" height="200" width="200" >
+            <img src="content/images/carrots.jpg" alt="carrots" height="100" width="100" >
             <div class="row">
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">{{myProduct.name}}</p>
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'carrots'}">Price: {{myProduct.price | currency}}</p>                <div class = "img">
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
+                    <hr></hr>
                 </div>
             </div>
 
 
 
-            <img src="content/images/milk.jpeg" alt="Milk" height="200" width="200" >
+            <img src="content/images/milk.jpeg" alt="Milk" height="100" width="100" >
             <div class="row">
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">{{myProduct.name}}</p>
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'milk'}">Price: {{myProduct.price | currency}}</p>                <div class = "img">
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
+                    <hr></hr>
                 </div>
             </div>
 
 
 
 
-            <img src="content/images/steak.jpg" alt="steak" height="200" width="200" >
+            <img src="content/images/steak.jpg" alt="steak" height="100" width="100" >
             <div class="row">
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">{{myProduct.name}}</p>
                 <p ng-repeat="myProduct in vm.testproducts | filter: {name: 'steak'}">Price: {{myProduct.price | currency}}</p>
 
                 <div class = "img">
                     <button type="button" class="btn btn-danger">Remove From Cart</button>
+                    <hr></hr>
                 </div>
             </div>
 
@@ -378,17 +377,6 @@ p.copyright {
 </div>
 <!-- /.content-section-a -->
 
-
-<div class="banner">
-
-    <div class="container">
-
-
-
-    </div>
-    <!-- /.container -->
-
-</div>
 <!-- /.banner -->
 
 <!-- Footer -->

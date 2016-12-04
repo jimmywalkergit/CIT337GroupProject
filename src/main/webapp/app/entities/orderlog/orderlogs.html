@@ -1,5 +1,5 @@
 <div>
-    <h2>Orderlogs</h2>
+    <h2>Order Log:</h2>
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
         <div class="row">
@@ -7,7 +7,7 @@
                 <button class="btn btn-primary" ui-sref="orderlog.new" >
                     <span class="glyphicon glyphicon-plus"></span>
                     <span >
-                        Create new Orderlog
+                        Create new Order
                     </span>
                 </button>
             </div>
@@ -29,12 +29,12 @@
                     <td><a ui-sref="orderlog-detail({id:orderlog.id})">{{orderlog.id}}</a></td>
                     <td>
                         <span ng-repeat="hasproducts in orderlog.hasproducts">
-                            <a class="form-control-static" ui-sref="orderproduct-detail({id: hasproducts.id})">{{hasproducts.id}}</a>{{$last ? '' : ', '}}
+                            <a class="form-control-static" ui-sref="orderproduct-detail({id: hasproducts.id})">{{hasproducts.name}}</a>{{$last ? '' : ', '}}
                         </span>
                     </td>
                     <td>
                         <span ng-repeat="hascustomers in orderlog.hascustomers">
-                            <a class="form-control-static" ui-sref="ordercustomer-detail({id: hascustomers.id})">{{hascustomers.id}}</a>{{$last ? '' : ', '}}
+                            <a class="form-control-static" ui-sref="ordercustomer-detail({id: hascustomers.id})">{{hascustomers.name}}</a>{{$last ? '' : ', '}}
                         </span>
                     </td>
                     <td class="text-right">

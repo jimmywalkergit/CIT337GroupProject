@@ -396,15 +396,20 @@ padding-top:100px;
 
 
 
-    <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px">
+    <div class="col-lg-5 col-lg-offset-2" style="margin-top:100px; text-align:center;">
+        <h2 style="padding-bottom:20px;">Search For Products:</h2>
 
-        <label>Search: <input placeholder = "Enter Your Product Search Here:" value = "" ng-model="searchText"></label>
+        <label style="padding-bottom:20px;">Search: <input placeholder = "Enter Your Product Here" value = "" ng-model="searchText"></label>
         <table id="searchTextResults">
             <tr><th>Matching Products In Stock:</th></tr>
             <tr ng-repeat="products in vm.testproducts | filter:searchText">
-                <td>{{products.name}} </td>
-                <td>Price: {{products.price | currency}}<td>
 
+                <td>{{products.name}}
+                </td>
+
+                <td>Price: {{products.price | currency}}<td>
+                <td style=" padding-left:20px; padding-bottom:5px;">                <button type="button" class="btn btn-primary">Add to Cart</button>
+                </td>
             </tr>
         </table>
 
